@@ -6,7 +6,7 @@ A modern **Food Delivery Web Application** built using the **MERN Stack**. Quick
 
 ## 🚀 Live Demo
 
-**Frontend:** Coming Soon
+**Frontend:** https://quick-bite-ten-zeta.vercel.app/
 
 **Admin Panel:** Coming Soon
 
