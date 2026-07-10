@@ -1,0 +1,31 @@
+import Navbar from './components/Navbar/Navbar.jsx'
+import Sidebar from './components/Sidebar/Sidebar.jsx'
+import {Routes, Route} from 'react-router-dom'
+import Add from './pages/Add/Add.jsx'
+import List from './pages/List/List.jsx'
+import Orders from './pages/Orders/Orders.jsx'
+import { ToastContainer } from 'react-toastify';
+
+function App() {
+  const url = "http://localhost:8080";
+
+  return (
+    <>
+    <ToastContainer/>
+      <Navbar/>
+      <hr />
+
+      <div className="app-content">
+        <Sidebar/>
+
+        <Routes>
+          <Route path='/add' element={<Add url={url}/>} />
+          <Route path='/list' element={<List url={url}/>}/>
+          <Route path='/orders' element={<Orders url={url}/>}/>
+        </Routes>
+      </div>
+    </>
+  )
+}
+
+export default App
