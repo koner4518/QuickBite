@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 
 export default function StoreContextProvider(props){
 
-    const url = "http://www.localhost:8080";
+    const url = import.meta.env.VITE_BACKEND_URL;
 
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");

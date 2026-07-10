@@ -1,6 +1,5 @@
 import "./ExploreMenu.css";
 import { menu_list } from "../../assets/assets";
-import { it } from "@faker-js/faker";
 
 export default function ExploreMenu({category, setCategory}) {
 

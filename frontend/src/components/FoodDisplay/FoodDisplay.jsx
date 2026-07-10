@@ -2,7 +2,6 @@ import { useContext } from "react";
 import "./FoodDisplay.css";
 import { StoreContext } from "../Context/StoreContext";
 import FoodItem from "../FoodItem/FoodItem";
-import { it } from "@faker-js/faker";
 
 export default function FoodDisplay({ category }) {
   const { food_list } = useContext(StoreContext);
