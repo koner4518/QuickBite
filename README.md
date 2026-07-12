@@ -8,7 +8,7 @@ A modern **Food Delivery Web Application** built using the **MERN Stack**. Quick
 
 **Frontend:** https://quick-bite-ten-zeta.vercel.app/
 
-**Admin Panel:** Coming Soon
+**Admin Panel:** https://quick-bite-jjv1.vercel.app/add
 
 ---
 
