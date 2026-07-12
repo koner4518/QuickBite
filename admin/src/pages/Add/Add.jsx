@@ -51,8 +51,13 @@ export default function Add({url}){
                 toast.success(response.data.message);
             }
         } catch (error) {
-            toast.error(error.response?.data.message);
-            console.log(error.response?.data.message);
+            if (!error.response) {
+                toast.info("Backend is starting. Please wait 30-60 seconds and try again.");
+            }
+            else {
+                toast.error(error.response?.data.message);
+                console.log(error.response?.data.message);
+            }
         } finally {
             setLoading(false);
         }

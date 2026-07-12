@@ -8,13 +8,22 @@ export default function List({url}){
     const [list, setList] = useState([]);
 
     const fetchList = async () => {
-        const response = await axios.get(`${url}/api/food/list`);
-        console.log(response.data);
-        if(response.data.success) {
-            setList(response.data.data);
-        }
-        else {
-            toast.error("Error");
+        try {
+            const response = await axios.get(`${url}/api/food/list`);
+            if(response.data.success) {
+                setList(response.data.data);
+            }
+            else {
+                toast.error("Error");
+            }
+        } catch (error) {
+            if (!error.response) {
+                toast.info("Backend is starting. Please wait 30-60 seconds and try again.");
+            }
+            else {
+                toast.error(error.response?.data.message);
+                console.log(error.response?.data.message);
+            }
         }
     }
 

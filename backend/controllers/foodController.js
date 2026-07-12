@@ -25,47 +25,6 @@ const addFood = async (req, res) => {
         console.error(err.stack);
         res.json({success: false, message: err.message});
     }
-
-    // try {
-    //     console.log("=========== BODY ===========");
-    //     console.log(req.body);
-
-    //     console.log("=========== FILE ===========");
-    //     console.dir(req.file, { depth: null });
-
-    //     const newFood = new Food({
-    //         name: req.body.name,
-    //         description: req.body.description,
-    //         price: req.body.price,
-    //         category: req.body.category,
-    //         image: {
-    //             url: req.file.path,
-    //             filename: req.file.filename,
-    //         },
-    //     });
-
-    //     console.log("=========== BEFORE SAVE ===========");
-
-    //     await newFood.save();
-
-    //     console.log("=========== SAVED ===========");
-
-    //     return res.json({
-    //         success: true,
-    //         message: "Food Added",
-    //     });
-
-    // } catch (err) {
-    //     console.log("=========== ERROR ===========");
-    //     console.error(err);
-    //     console.error(err.message);
-    //     console.error(err.stack);
-
-    //     return res.status(500).json({
-    //         success: false,
-    //         message: err.message,
-    //     });
-    // }
 }
 
 // all food list
