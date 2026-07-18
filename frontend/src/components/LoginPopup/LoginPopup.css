@@ -72,3 +72,66 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.otp-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.otp-input{
+    width:40px;
+    height:40px;
+    text-align:center;
+    font-size:16px;
+    font-weight:500;
+    border:1px solid #c9c9c9;
+    border-radius:8px;
+    outline:none;
+    transition:0.2s;
+}
+
+.otp-input:focus{
+    border-color:tomato;
+    box-shadow:0 0 5px rgba(255,99,71,.4);
+}
+
+.otp-boxes{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.otp-message{
+    text-align:center;
+    font-size:14px;
+    color:#666;
+    margin:0;
+}
+
+.otp-email{
+    color:tomato;
+    font-weight:500;
+    word-break:break-word;
+    text-align:center;
+}
+
+.otp-resend{
+    margin-top:5px;
+    text-align:center;
+}
+
+.resend-btn{
+    background:none;
+    border:none;
+    color:tomato;
+    cursor:pointer;
+    font-weight:600;
+    font-size:14px;
+}
+
+.resend-btn:hover{
+    text-decoration:underline;
+}
