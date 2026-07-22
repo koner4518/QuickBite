@@ -26,7 +26,7 @@ const sendOTP = async (req, res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: "QuickBite Email Verification",
-            text: `Your OTP is ${otp}. It is valid for 2 minutes`,
+            text: `Your OTP is ${otp}. It is valid for 1 minute.`,
         });
 
         res.json({success: true, message: "OTP sent successfully"});
