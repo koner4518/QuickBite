@@ -6,7 +6,7 @@ A modern **Food Delivery Web Application** built using the **MERN Stack**. Quick
 
 ## 🚀 Live Demo
 
-**Frontend:** https://quick-bite-ten-zeta.vercel.app/
+**Frontend:** https://quick-bite-rose-xi.vercel.app/
 
 **Admin Panel:** https://quick-bite-jjv1.vercel.app/add
 
@@ -62,6 +62,7 @@ A modern **Food Delivery Web Application** built using the **MERN Stack**. Quick
 - Mongoose
 - JWT Authentication
 - bcrypt
+- nodemailer
 - Multer
 - Cloudinary
 - Stripe Payment Gateway
@@ -147,6 +148,7 @@ QuickBite/
 # 🔐 Authentication
 
 - JWT Token Based Authentication
+- Email OTP verification using nodemailer
 - Password Encryption using bcrypt
 - Protected Routes
 - Secure User Sessions
