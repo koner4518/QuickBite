@@ -41,6 +41,8 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(8080, ()=> {
-    console.log("app is listening to port 8080");
-});
+if (process.env.NODE_ENV !== "production") {
+  app.listen(8080, () => {
+    console.log("Server running on port 8080");
+  });
+}
