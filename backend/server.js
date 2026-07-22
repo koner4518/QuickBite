@@ -46,3 +46,5 @@ if (process.env.NODE_ENV !== "production") {
     console.log("Server running on port 8080");
   });
 }
+
+export default app;
