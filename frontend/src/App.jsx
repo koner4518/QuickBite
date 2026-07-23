@@ -6,19 +6,21 @@ import Cart from "./pages/Cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
-import LoginPopup from "./components/LoginPopup/LoginPopup";
+import AuthPopup from "./components/Auth/AuthPopup.jsx";
 import Verify from "./pages/Verify/Verify.jsx";
 import MyOrders from "./pages/MyOrders/MyOrders.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
 
   return (
     <>
-      {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></>}
+      {showLogin ? <AuthPopup setShowLogin={setShowLogin} /> : <></>}
 
       <div className="app">
-        <Navbar setShowLogin={setShowLogin}/>
+        <Navbar setShowLogin={setShowLogin} />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,6 +31,16 @@ function App() {
         </Routes>
       </div>
       <Footer />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+      />
     </>
   );
 }

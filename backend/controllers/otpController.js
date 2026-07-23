@@ -1,6 +1,7 @@
 import transporter from "../config/email.js";
 import generateOTP from "../utils/generateOTP.js"
 import OTP from "../models/otpModel.js";
+import User from "../models/userModel.js"
 
 const sendOTP = async (req, res) => {
     try {
@@ -8,6 +9,13 @@ const sendOTP = async (req, res) => {
 
         if(!email){
             return res.json({success: false, message: "Email is required"});
+        }
+
+        // Check if user already exists
+        const existingUser = await User.findOne({email});
+
+        if (existingUser) {
+            return res.json({success: false, message: "User already exists. Please login instead."});
         }
 
         // delete previous otp
