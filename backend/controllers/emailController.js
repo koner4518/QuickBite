@@ -1,27 +1,25 @@
 import transporter from "../config/email.js";
 
-const sendTestEmail = async (req, res) => {
+const sendMail = async (email, subject, html) => {
     try {
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // send to yourself for testing
-            subject: "QuickBite Test Email",
-            text: "Congratulations! Nodemailer is working successfully.",
+        const info = await transporter.sendMail({
+            from: process.env.SENDER,
+            to: email,
+            subject,
+            html,
         });
 
-        res.json({
+        console.log("Email sent:", info.messageId);
+
+        return {
             success: true,
             message: "Email sent successfully",
-        });
+        };
 
     } catch (error) {
-        console.log(error);
-
-        res.json({
-            success: false,
-            message: error.message,
-        });
+        console.error("Email sending error:", error);
+        throw error;
     }
 };
 
-export { sendTestEmail };
+export {sendMail};

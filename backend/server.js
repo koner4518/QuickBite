@@ -11,6 +11,7 @@ import orderRouter from "./routes/orderRoute.js";
 import authMiddleware from "./middleware/auth.js";
 import emailRouter from "./routes/emailRoute.js";
 import otpRouter from "./routes/otpRoute.js";
+import passwordRouter from "./routes/passwordRoute.js";
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use("/api/cart", authMiddleware, cartRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/email", emailRouter);
 app.use("/api/otp", otpRouter);
+app.use("/api/password", passwordRouter);
 
 app.use((err, req, res, next) => {
     console.error("GLOBAL ERROR:");
